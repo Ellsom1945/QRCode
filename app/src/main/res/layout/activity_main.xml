@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="使用相机扫描二维码"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        />
-
+        android:layout_width="250dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/scan"
+         />
     <Button
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/more"
         android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="生成二维码"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@+id/button3"
-        />
-
-</RelativeLayout>
+        android:layout_width="250dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+         />
+</LinearLayout>

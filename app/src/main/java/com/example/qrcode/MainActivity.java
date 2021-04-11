@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -33,14 +34,14 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
     public Button button4 = null;
 
     public static boolean isHttpUrl(String urls) {
-        boolean isurl = false;
+        boolean isUrl = false;
         String regex = "(((https|http)?://)?([a-z0-9]+[.])|(www.))"
                 + "\\w+[.|\\/]([a-z0-9]{0,})?[[.]([a-z0-9]{0,})]+((/[\\S&&[^,;\u4E00-\u9FA5]]+)+)?([.][a-z0-9]{0,}+|/?)";//设置正则表达式
 
         Pattern pat = Pattern.compile(regex.trim());//对比
         Matcher mat = pat.matcher(urls.trim());
-        isurl = mat.matches();//判断是否匹配
-        return isurl;
+        isUrl = mat.matches();//判断是否匹配
+        return isUrl;
     }
 
     @Override
@@ -70,6 +71,10 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
          */
         button3.setOnClickListener(new ButtonOnClickListener(button3.getId()));
         button4.setOnClickListener(new ButtonOnClickListener(button4.getId()));
+        String s ="<big><big><big>扫一扫</big></big></big>";
+        button3.setText(Html.fromHtml(s));
+        s="<big><big><big>生成二维码</big></big></big>";
+        button4.setText(Html.fromHtml(s));
     }
 
 

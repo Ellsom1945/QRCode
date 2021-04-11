@@ -3,6 +3,7 @@ package com.example.qrcode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.TextView;
 
 public class TextActivity extends AppCompatActivity {
@@ -12,7 +13,7 @@ public class TextActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text);
         String text=getIntent().getStringExtra("context");
-        System.out.println(text);
-        ((TextView)findViewById(R.id.textView)).setText(text);
+        String s= "<big><big><big>"+text+"</big></big></big>";
+        ((TextView)findViewById(R.id.textView)).setText(Html.fromHtml(s));
     }
 }
